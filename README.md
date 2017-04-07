@@ -1,4 +1,4 @@
-# vr-up-forever
+embedded# vr-up-forever
 This is an article with tips about how to keep a VR installation up forever
 
 This doc is a work in progress and I'll continue to add new things as they come up. If you have questions feel free to tweet me [@WJRRo](https://twitter.com/wjrro)
@@ -78,7 +78,12 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 
 
 #### Not free but easy
+Inteset offers an interesting piece of software called [Secure Lockdown](http://www.inteset.com/secure-lockdown-standard-edition.html). Basically this appliation lets you specify a single application or applications that are allowed to run on the machine. Once enabled the computer reboots into an ultra locked down single user mode which can only be exited via a special key combination and a passcode. I'll be testing this solution out this weekend for VR but I've used it before with success in other installations. After testing this section will get an update. For now see the [Secure Lockdown Administrators Guide](https://services.inteset.com/downloadfiles/Inteset%20Secure%20Lockdown%20v2%20-%20Administrator%20Guide.pdf) for more info.
 
+#### The hard way (Windows Embedded)
+Coming Soon!
+<br>
+More for industry or enterprise installations I'll be working on adding step by step instructions for configuring a Windows embeded solution soon.
 
 ## Setting up your software
 
@@ -160,8 +165,8 @@ internal static bool runInBackground = true;
 ```
 Now when you run your app when the headset is removed the Oculus headset will turn off its display but your external monitor will continue running! From there you can use the OVRHeadsetDelegate script from above to manage loading a scene with a video or a slideshow to use as an attract screen for your experience.
 
-** Tip! ** <br>
-When transitioning between scenes I find that its less jarring for your players/users/visitors to first fade out. Oculus provides a fading utility as a part of the Oculus Utilities that you can use but it must be modified to enable fading both in and out. I've uploaded my implementation of this script INSERT LINK. Using this script you can trigger a fade and then use the fade time to delay triggering your scene change.
+**Tip!** <br>
+When transitioning between scenes I find that its less jarring for your players/users/visitors to first fade out. Oculus provides a fading utility as a part of the Oculus Utilities that you can use but it must be modified to enable fading both in and out. I've uploaded my implementation of this script [here](https://github.com/wjrro/handy-oculus-scripts). Using this script you can trigger a fade and then use the fade time to delay triggering your scene change.
 
 ##### Headless installation
 
