@@ -1,4 +1,4 @@
-embedded# vr-up-forever
+# vr-up-forever
 This is an article with tips about how to keep a VR installation up forever
 
 This doc is a work in progress and I'll continue to add new things as they come up. If you have questions feel free to tweet me [@WJRRo](https://twitter.com/wjrro)
