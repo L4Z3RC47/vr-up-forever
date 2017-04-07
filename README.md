@@ -13,12 +13,13 @@ Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
  * [Oculus](#oculus)
  * [Vive](#vive)
 1. [Useful Links](#useful-links)
-  * [Software](#software)
-  * [Hardware](#hardware)
-  * [Code examples](#code-examples)
+ * [Software](#software)
+ * [Hardware](#hardware)
+ * [Code examples](#code-examples)
+1. [Contributing](#contributing)
 
 ## Introduction
-
+This document is intended to serve as a general guide for setting up unattended VR installations. There are many different possible configurations depending on your needs. If you have suggestions
 
 ## Setting up your computer
 
@@ -51,3 +52,20 @@ Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
 
 
 #### Code Examples
+
+
+## Contributing
+
+If you'd like to contribute to this project, please fork
+the repository and make your changes in a separate branch.
+
+```bash
+git clone https://github.com/wjrro/vr-up-forever.git .
+cd aic-project
+git flow start feature yourinitials-good-description-issuenumberifapplicable
+# Make some changes, commit your code
+git push origin yourinitials-good-description-issuenumberifapplicable
+```
+
+Then on github.com, create a Pull Request to merge your changes into the
+`master` branch.
