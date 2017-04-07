@@ -27,7 +27,7 @@ Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
 
 ## Introduction
 
-This document is intended to serve as a general guide for setting up unattended VR installations. There are many different possible configurations depending on your needs. If you have suggestions please feel to submit contributions!
+This document is intended to serve as a general guide for setting up unattended VR installations. There are many different possible configurations depending on your needs. A lot of this doc is compiled from my experience setting up installations for [DiMoDA](https://dimoda.art). If you have suggestions please feel to submit contributions!
 
 As of this writing most VR installations are confined to the PC realm so this guide is going to stay focused on Windows configuration for now. It would be great to get a linux section started too. Currently Apple hardware does not officially support the major VR hardware. If Apples hardware gets updated and drivers are made for macOS I'll update this guide to include configurations for those machines as well.
 
@@ -102,8 +102,64 @@ There are several different settings and configurations that you can setup when 
 
 Generally I prefer to run installations with a monitor for several reasons. First, this makes setup and configuration a lot easier. It can be very difficult to next to impossible to troubleshoot issues if you only have a VR headset as a display. If you're physically with the machine its also much quicker to interface with the machine directly if you can rather than relying on Remote Desktop or a VNC like solution. Additionally I find that having a monitor makes your users experience a bit more social so that other users/visitors can watch alongside as the person in the headset goes through the VR experience.
 
+###### Handling headset removed
+
+Most likely you'll want to trigger some event or switch scenes based on whether someone is wearing your headset or not. You can easily manage these events with the OVRManager which is a part of the Oculus Utilities package. Its best not to modify these scripts so instead we'll setup a delegate to handle the calls in our own script.
+
+You'll need to attach an OVRManager script to one object in your scene. You can only have one OVRManager in a scene. Its best to attach this object to something that will not get destroyed when you load another scene.
+
+```C#
+using UnityEngine;
+
+// Uncomment if you want to switch scenes based on the headset status.
+// using UnityEngine.SceneManagement;
+
+public class OVRHeadsetDelegate : MonoBehaviour {
+
+
+	void OnEnable () {
+
+		OVRManager.HMDMounted += HandleHMDMounted;
+		OVRManager.HMDUnmounted += HandleHMDUnmounted;
+
+	}
+
+	void OnDisable () {
+
+		OVRManager.HMDMounted -= HandleHMDMounted;
+		OVRManager.HMDUnmounted -= HandleHMDUnmounted;
+
+	}
+
+	void HandleHMDMounted() {
+
+		Debug.Log("HMD Mounted");
+
+    // Trigger something here
+
+	}
+
+	void HandleHMDUnmounted() {
+
+		Debug.Log("HMD UnMounted");
+
+    // Trigger something here
+
+	}
+}
+```
+
 ###### Configuring an attract screen
 
+By default rendering will stop and you'll get either a paused game screen or just black on your external monitor when the headset is not mounted (on someones head). To get around this you'll need to modify the OVRManager script to allow for running in the background. To do this find the 'runInBackground' bool and set it's value to 'true'
+
+``` C#
+internal static bool runInBackground = true;
+```
+Now when you run your app when the headset is removed the Oculus headset will turn off its display but your external monitor will continue running! From there you can use the OVRHeadsetDelegate script from above to manage loading a scene with a video or a slideshow to use as an attract screen for your experience.
+
+** Tip! ** <br>
+When transitioning between scenes I find that its less jarring for your players/users/visitors to first fade out. Oculus provides a fading utility as a part of the Oculus Utilities that you can use but it must be modified to enable fading both in and out. I've uploaded my implementation of this script INSERT LINK. Using this script you can trigger a fade and then use the fade time to delay triggering your scene change.
 
 ##### Headless installation
 
