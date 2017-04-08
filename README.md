@@ -101,7 +101,7 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 
 1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder.
 <br>
-``` bat
+```bat
 @ECHO OFF
 TIMEOUT /T 10
 REM Total Delay = 10 seconds
