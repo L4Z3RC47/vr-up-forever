@@ -93,13 +93,13 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 
 1. If your using a Rift install the [Oculus app](https://www3.oculus.com/en-us/setup/) and go through the device setup sequence.
 
-1. Setup a new standard user account, install your app for that (or both new and admin) user/s.
+1. Setup a new local standard user account, install your app for that (or both new and admin) user/s. In your standard user account test launching both your app and the Oculus Home app. Oculus home is setup per user so you will need to run all of your Oculus setup on this user account too.
 
 1. If your computer will be somewhere accessible by visitors you may want to disable the power button in the in System Settings/Hardware and Sound/Power Options/
 
 1. Configure any additional sound output to mirror the Oculus headset output
 
-1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder. We start with launching the Oculus home app first as the Oculus rift is dependent on the app. By starting this first we prevent the Home app from starting after the launch of our application which would result in the Home app being displayed with a focus on top of our app.
+1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder for the standard user account you just created. We start with launching the Oculus home app first as the Oculus rift is dependent on the app. By starting this first we prevent the Home app from starting after the launch of our application which would result in the Home app being displayed with a focus on top of our app.
 
 
 	```dos
@@ -114,13 +114,24 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 
 1. Setup a power schedule if needed. To set a startup time you may need to return to your BIOS settings. To set a Shutdown time you can follow [these instructions](https://www.nextofwindows.com/how-to-schedule-windows-automatically-power-on-and-power-off) on how to setup a scheduled task in the control panel.
 
+1. Setup your computer to automatically login to your standard account.
+
+    1. Click Start, type netplwiz, and then press Enter.
+    1. In the User Accounts dialog box, click the account you want to automatically log on to.If it is available, clear the Users Must Enter A User Name And Password To Use This Computer check box.
+    1. Click OK.
+    1. In the Automatically Log On dialog box, enter the user’s password twice and click OK.
+
+    Referenced from https://technet.microsoft.com/en-us/library/ee872306.aspx
+
 1. Test test test your app and make sure everything is running smoothly.
 
 ### Lock it down
 
 #### Not free but easy
 
-Inteset offers an interesting piece of software called [Secure Lockdown](http://www.inteset.com/secure-lockdown-standard-edition.html). Basically this application lets you specify a single application or applications that are allowed to run on the machine. Once enabled the computer reboots into an ultra locked down single user mode which can only be exited via a special key combination and a passcode. I'll be testing this solution out this weekend for VR but I've used it before with success in other installations. After testing this section will get an update. For now see the [Secure Lockdown Administrators Guide](https://services.inteset.com/downloadfiles/Inteset%20Secure%20Lockdown%20v2%20-%20Administrator%20Guide.pdf) for more info.
+Inteset offers an interesting piece of software called [Secure Lockdown](http://www.inteset.com/secure-lockdown-standard-edition.html). Basically this application lets you specify a single application or applications that are allowed to run on the machine. Once enabled the computer reboots into an ultra locked down mode which can only be exited via a special key combination and a passcode. This method seems to work well and also offers solutions for ensuring that your application is always activated and kept on top. See the [Secure Lockdown Users Guide](https://services.inteset.com/DownloadFiles/Inteset%20Secure%20Lockdown%20v2%20User%20Guide.pdf) for full documentation on how to get started. The app sells for $20.
+
+After configuring your standard user account and setting up automatic login, go to your standard user account and configure Secure Lockdown from there. After enabling Secure Lockdown you should be prompted to restart your computer. On restart your computer should automatically login to your standard user and Secure Lockdown will mange launching and monitoring your VR app and any other processes.
 
 #### Free and minimal
 
@@ -219,7 +230,9 @@ When transitioning between scenes I find that its less jarring for your players/
 
 ##### Headless installation
 
-More info coming soon!
+In my opinion the easiest way to configure a headless installation is to setup and test your .bat script startup or Secure Lockdown configuration first. Once you have everything starting automatically in the right order you should be able to unplug your monitor and run your application. Remember to restart your computer after unplugging your monitor.
+
+Don't forget to test, test, test!
 
 #### Unreal Engine apps
 
