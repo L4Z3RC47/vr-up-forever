@@ -232,25 +232,21 @@ Currently when running an Oculus application you must also run the Oculus home a
 ## Guiding your users
 This part is less about making your installation run forever and more about creating a good experience that everyone can enjoy. Providing clear guidance to your users will often make the difference between a fun and engaging experience vs. a confusing and frustrating one. Include clear instructions for your audience up front and they will thank you for it (or at least they won't complain!) This is especially important when you don't have docents or assistants on hand to tell people how to interact with your app. For DiMoDA we try to include instructions in three places...
 
-1. **In print**
+#### In print
+Sometimes the easiest thing to do is to provide a diagram of your controls either as a print out or as wall text next to the place where your headset and controls normally rest.
 
-  Sometimes the easiest thing to do is to provide a diagram of your controls either as a print out or as wall text next to the place where your headset and controls normally rest.
-<br>
-1. **In the attract screen**
 
-  Similar to printed instructions if you already have a diagram and attract screen setup it can be a helpful aid for quickly familiarizing people with your controls
+#### In the attract screen
+Similar to printed instructions if you already have a diagram and attract screen setup it can be a helpful aid for quickly familiarizing people with your controls
 
-1. **At the start of your experience**
+#### At the start of your experience
+In a public installation its inevitable that some people are not going to be familiar with your controller any they may have a hard time getting used to a new device in a short period of time. This may also be their first experience with VR which adds another layer of unfamiliarity. Add onto all of this, if you're using an XBox One or PS4 controller your users will be unable to see their hands to help them get situated. Fortunately while they're wearing a headset you have complete control over the experience and there are a few things that you can do to help on-board people relatively quickly.
 
-  In a public installation its inevitable that some people are not going to be familiar with your controller any they may have a hard time getting used to a new device in a short period of time. This may also be their first experience with VR which adds another layer of unfamiliarity. Add onto all of this, if you're using an XBox One or PS4 controller your users will be unable to see their hands to help them get situated. Fortunately while they're wearing a headset you have complete control over the experience and there are a few things that you can do to help on-board people relatively quickly.
+###### Show your control diagram
+If you have one, right at the beginning of the experience is a good opportunity to show your display diagram. You can at least guarantee that the user will see it. If nothing else this should be a bare minimum. If it't not disruptive to your experience you may opt to display your diagram frequently as a reminder, for example when transitioning between scenes.
 
-    **Show your control diagram**
-    <br>
-    If you have one, right at the beginning of the experience is a good opportunity to show your display diagram. You can at least guarantee that the user will see it. If nothing else this should be a bare minimum. If it't not disruptive to your experience you may opt to display your diagram frequently as a reminder, for example when transitioning between scenes.
-
-    **Provide controller tutorials**
-    <br>
-    This option requires a bit more coding work but I think that it pays off and in the end is the most successful method of getting people familiar with controls quickly. There are many different ways to approach controls training so I'll share my approach in the section below. If other people come up with other methods they would like to share I will include them as sections in this doc as well.
+###### rovide controller tutorials
+This option requires a bit more coding work but I think that it pays off and in the end is the most successful method of getting people familiar with controls quickly. There are many different ways to approach controls training so I'll share my approach in the section below. If other people come up with other methods they would like to share I will include them as sections in this doc as well.
 
 #### Creating controller tutorials
 
