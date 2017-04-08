@@ -281,7 +281,7 @@ Some people can become disoriented when immersed in a VR experience. Because of 
 For more information please see the [Oculus Health and Safety Warnings documents](https://www.oculus.com/legal/health-and-safety-warnings/).
 
 **Hygiene**<br>
-When you've got something that's going to be touching the faces of hundreds or thousands of people its important to keep things sanitary. You can find various face protector solutions available online but at a minimum you should provide alcohol free sanitary wipes in an accessible area to allow visitors the opportunity to clean things off. Its also probably a good idea to keep a microfiber cloth handy to give the lenses a cleaning now and then as well. Be careful not to clean the lenses with anything abrasive otherwise you risk scratching and permanently damaging the headset. 
+When you've got something that's going to be touching the faces of hundreds or thousands of people its important to keep things sanitary. You can find various face protector solutions available online but at a minimum you should provide alcohol free sanitary wipes in an accessible area to allow visitors the opportunity to clean things off. Its also probably a good idea to keep a microfiber cloth handy to give the lenses a cleaning now and then as well. Be careful not to clean the lenses with anything abrasive otherwise you risk scratching and permanently damaging the headset.
 
 ## Hardware Considerations
 
@@ -290,6 +290,11 @@ When you've got something that's going to be touching the faces of hundreds or t
 The headset itself is lightweight and for the most part easy for people to adjust. That being said it is common for people to not notice the straps on the side of the headset that allow them to adjust the fit. If your installation will be left unattended I recommend putting a guide to adjusting the headset in print, upfront and next to the normal resting place of the headset and any controllers that you have.
 
 Remind your users that parts of the headset are delicate! In particular the earphones are vulnerable to being damaged or completely ripped off. If you're not careful the HDMI/USB tether cable for the oculus can degrade overtime and you may run into connectivity issues if the cable becomes pinched or excessively bent in any areas. I recommend looking into solutions for providing extra support or reinforcement for your cables. Otherwise you may want to invest in a few spares. Fortunately Oculus now offers replacement parts for these components which may be purchased from the Oculus [accessories page](https://www.oculus.com/accessories/)
+
+![Damaged Headset](/images/damaged_headset.JPG)
+
+![Damaged Headphone](/images/damaged_headphone.JPG)
+
 
 #### Vive
 
