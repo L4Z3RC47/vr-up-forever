@@ -245,7 +245,7 @@ In a public installation its inevitable that some people are not going to be fam
 ###### Show your control diagram
 If you have one, right at the beginning of the experience is a good opportunity to show your display diagram. You can at least guarantee that the user will see it. If nothing else this should be a bare minimum. If it't not disruptive to your experience you may opt to display your diagram frequently as a reminder, for example when transitioning between scenes.
 
-###### rovide controller tutorials
+###### Provide controller tutorials
 This option requires a bit more coding work but I think that it pays off and in the end is the most successful method of getting people familiar with controls quickly. There are many different ways to approach controls training so I'll share my approach in the section below. If other people come up with other methods they would like to share I will include them as sections in this doc as well.
 
 #### Creating controller tutorials
