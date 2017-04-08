@@ -11,6 +11,12 @@ Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
     * [Oculus minimum specs](#oculus-minimum-specs)
     * [HTC minimum specs](#htc-minimum-specs)
 1. [Setting up your computer](#setting-up-your-computer)
+    * [Rack 'em up](#rack'em-up)
+        * [Configure the OS](#configure-the-os)
+    * [Lock it down](#lock-it-down)
+        * [Not free but easy](#not-free-but-easy)
+        * [Free and minimal](#free-and-minimal)
+        * [The hard way](#Windows Embedded)
 1. [Setting up your software](#setting-up-your-software)
     * [Unity 3D apps](#unity-3d-apps)
         * [Installation with a mirrored monitor](#installation-with-a-mirrored-monitor)
@@ -18,6 +24,9 @@ Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
     * [Unreal Engine apps](#unreal-engine-apps)
     * [Oculus Rift](#oculus-rift)
     * [HTC Vive](#htc-vive)
+1. [Guiding your users](#guiding-your-users)
+    * [Creating controller tutorials](#creating-controller-tutorials)
+    * [Safety](#safety)
 1. [Hardware Considerations](#hardware-considerations)
     * [Oculus](#oculus)
     * [Vive](#vive)
@@ -74,12 +83,48 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 
 ## Setting up your computer
 
-#### Free and minimal
+### Rack'em up
 
+#### Configure the OS
+
+1. Configure your BIOS. If available change the power settings to turn the computer on after a power failure. For the extra security conscious depending on your motherboard and BIOS firmware you may also be able to disable any unused USB ports. If your computer is exposed this can help prevent any unwanted meddling.
+
+1. Install all your drivers (graphics card, audio card, wireless drivers etc...)
+
+1. If your using a Rift install the [Oculus app](https://www3.oculus.com/en-us/setup/) and go through the device setup sequence.
+
+1. Setup a new standard user account, install your app for that (or both new and admin) user/s.
+
+1. If your computer will be somewhere accessible by visitors you may want to disable the power button in the in System Settings/Hardware and Sound/Power Options/
+
+1. Configure any additional sound output to mirror the Oculus headset output
+
+1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder.
+<br>
+```
+@ECHO OFF
+TIMEOUT /T 10
+REM Total Delay = 10 seconds
+Start "" "C:\<PATH TO OCULUS HOME APP OR ALIAS>"
+TIMEOUT /T 30
+REM Total Delay = 30 seconds
+Start "" "C:\<PATH TO YOUR APP OR ALIAS>"
+```
+
+1. Setup a power schedule if needed. To set a startup time you may need to return to your BIOS settings. To set a Shutdown time you can follow [these instructions](https://www.nextofwindows.com/how-to-schedule-windows-automatically-power-on-and-power-off) on how to setup a scheduled task in the control panel.
+
+1. Test test test your app and make sure everything is running smoothly.
+
+### Lock it down
 
 #### Not free but easy
 Inteset offers an interesting piece of software called [Secure Lockdown](http://www.inteset.com/secure-lockdown-standard-edition.html). Basically this appliation lets you specify a single application or applications that are allowed to run on the machine. Once enabled the computer reboots into an ultra locked down single user mode which can only be exited via a special key combination and a passcode. I'll be testing this solution out this weekend for VR but I've used it before with success in other installations. After testing this section will get an update. For now see the [Secure Lockdown Administrators Guide](https://services.inteset.com/downloadfiles/Inteset%20Secure%20Lockdown%20v2%20-%20Administrator%20Guide.pdf) for more info.
 
+#### Free and minimal
+
+After configuring your computer and testing your application as long as your app is set to fullscreen on startup you should be ready to go!
+
+Note: By only configuring
 #### The hard way (Windows Embedded)
 Coming Soon!
 <br>
@@ -181,6 +226,37 @@ More info coming soon!
 Currently when running an Oculus application you must also run the Oculus home application. When launching your app this unfortunately means that often times Oculus home will open and take focus on your main display if you are using one to mirror content outside of the headset. To get around this we setup a simple batch script to ensure that we launch Oculus home first, followed by our application.
 
 #### HTC Vive
+
+
+## Guiding your users
+This part is less about making your installation run forever and more about creating a good experience that everyone can enjoy. Providing clear guidance to your users will often make the difference between a fun and engaging experience vs. a confusing and frustrating one. Include clear instructions for your audience up front and they will thank you for it (or at least they won't complain!) This is especially important when you don't have docents or assistants on hand to tell people how to interact with your app. For DiMoDA we try to include instructions in three places...
+
+1. **In print**
+<br>
+Sometimes the easiest thing to do is to provide a diagram of your controls either as a print out or as wall text next to the place where your headset and controls normally rest.
+
+1. **In the attract screen**
+<br>
+Similar to printed instructions if you already have a diagram and attract screen setup it can be a helpful aid for quickly familiarizing people with your controls
+
+1. **At the start of your experience**
+<br>
+In a public installation its inevitable that some people are not going to be familiar with your controller any they may have a hard time getting used to a new device in a short period of time. This may also be their first experience with VR which adds another layer of unfamiliarity. Add onto all of this, if you're using an XBox One or PS4 controller your users will be unable to see their hands to help them get situated. Fortunately while they're wearing a headset you have complete control over the experience and there are a few things that you can do to help on-board people relatively quickly.
+
+    * **Show your control diagram**
+    <br>
+    If you have one, right at the beginning of the experience is a good opportunity to show your display diagram. You can at least guarantee that the user will see it. If nothing else this should be a bare minimum. If it't not disruptive to your experience you may opt to display your diagram frequently as a reminder, for example when transitioning between scenes.
+
+    * **Provide controller tutorials**
+    <br>
+    This option requires a bit more coding work but I think that it pays off and in the end is the most successful method of getting people familiar with controls quickly. There are many different ways to approach controls training so I'll share my approach in the section below. If other people come up with other methods they would like to share I will include them as sections in this doc as well.
+
+#### Creating controller tutorials
+
+
+
+#### Safety
+
 
 
 ## Hardware Considerations
