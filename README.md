@@ -26,7 +26,7 @@ Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
     * [HTC Vive](#htc-vive)
 1. [Guiding your users](#guiding-your-users)
     * [Creating controller tutorials](#creating-controller-tutorials)
-    * [Safety](#safety)
+1. [Safety](#safety)
 1. [Hardware Considerations](#hardware-considerations)
     * [Oculus](#oculus)
     * [Vive](#vive)
@@ -99,7 +99,7 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 
 1. Configure any additional sound output to mirror the Oculus headset output
 
-1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder.
+1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder. We start with launching the Oculus home app first as the Oculus rift is dependent on the app. By starting this first we prevent the Home app from starting after the launch of our application which would result in the Home app being displayed with a focus on top of our app.
 
 
 	```dos
@@ -119,17 +119,20 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 ### Lock it down
 
 #### Not free but easy
-Inteset offers an interesting piece of software called [Secure Lockdown](http://www.inteset.com/secure-lockdown-standard-edition.html). Basically this appliation lets you specify a single application or applications that are allowed to run on the machine. Once enabled the computer reboots into an ultra locked down single user mode which can only be exited via a special key combination and a passcode. I'll be testing this solution out this weekend for VR but I've used it before with success in other installations. After testing this section will get an update. For now see the [Secure Lockdown Administrators Guide](https://services.inteset.com/downloadfiles/Inteset%20Secure%20Lockdown%20v2%20-%20Administrator%20Guide.pdf) for more info.
+
+Inteset offers an interesting piece of software called [Secure Lockdown](http://www.inteset.com/secure-lockdown-standard-edition.html). Basically this application lets you specify a single application or applications that are allowed to run on the machine. Once enabled the computer reboots into an ultra locked down single user mode which can only be exited via a special key combination and a passcode. I'll be testing this solution out this weekend for VR but I've used it before with success in other installations. After testing this section will get an update. For now see the [Secure Lockdown Administrators Guide](https://services.inteset.com/downloadfiles/Inteset%20Secure%20Lockdown%20v2%20-%20Administrator%20Guide.pdf) for more info.
 
 #### Free and minimal
 
-After configuring your computer and testing your application as long as your app is set to fullscreen on startup you should be ready to go!
+After configuring your computer and testing your application as long as your app is set to full screen on startup you should be ready to go!
 
-Note: By only configuring
+Note: By only configuring basic startup you're potentially leaving your machine open to unwanted fiddling. Unless your computer is only accessible by trusted persons I would recommend going with the Secure Lockdown method above.
+
 #### The hard way (Windows Embedded)
+
 Coming Soon!
 <br>
-More for industry or enterprise installations I'll be working on adding step by step instructions for configuring a Windows embeded solution soon.
+More for industry or enterprise installations I'll be working on adding step by step instructions for configuring a Windows embedded solution soon.
 
 ## Setting up your software
 
@@ -204,7 +207,7 @@ public class OVRHeadsetDelegate : MonoBehaviour {
 
 ###### Configuring an attract screen
 
-By default rendering will stop and you'll get either a paused game screen or just black on your external monitor when the headset is not mounted (on someones head). To get around this you'll need to modify the OVRManager script to allow for running in the background. To do this find the 'runInBackground' bool and set it's value to 'true'
+By default rendering will stop and you'll get either a paused game screen or just black on your external monitor when the headset is not mounted (on someone's head). To get around this you'll need to modify the OVRManager script to allow for running in the background. To do this find the 'runInBackground' bool and set it's value to 'true'
 
 ``` C#
 internal static bool runInBackground = true;
@@ -228,39 +231,65 @@ Currently when running an Oculus application you must also run the Oculus home a
 
 #### HTC Vive
 
+More info coming soon!
 
 ## Guiding your users
+
 This part is less about making your installation run forever and more about creating a good experience that everyone can enjoy. Providing clear guidance to your users will often make the difference between a fun and engaging experience vs. a confusing and frustrating one. Include clear instructions for your audience up front and they will thank you for it (or at least they won't complain!) This is especially important when you don't have docents or assistants on hand to tell people how to interact with your app. For DiMoDA we try to include instructions in three places...
 
 #### In print
+
 Sometimes the easiest thing to do is to provide a diagram of your controls either as a print out or as wall text next to the place where your headset and controls normally rest.
 
 
 #### In the attract screen
+
 Similar to printed instructions if you already have a diagram and attract screen setup it can be a helpful aid for quickly familiarizing people with your controls
 
 #### At the start of your experience
+
 In a public installation its inevitable that some people are not going to be familiar with your controller any they may have a hard time getting used to a new device in a short period of time. This may also be their first experience with VR which adds another layer of unfamiliarity. Add onto all of this, if you're using an XBox One or PS4 controller your users will be unable to see their hands to help them get situated. Fortunately while they're wearing a headset you have complete control over the experience and there are a few things that you can do to help on-board people relatively quickly.
 
 ###### Show your control diagram
-If you have one, right at the beginning of the experience is a good opportunity to show your display diagram. You can at least guarantee that the user will see it. If nothing else this should be a bare minimum. If it't not disruptive to your experience you may opt to display your diagram frequently as a reminder, for example when transitioning between scenes.
+
+If you have one, right at the beginning of the experience is a good opportunity to show your display diagram. You can at least guarantee that the user will see it. If nothing else this should be a bare minimum. If it's not disruptive to your experience you may opt to display your diagram frequently as a reminder, for example when transitioning between scenes.
 
 ###### Provide controller tutorials
+
 This option requires a bit more coding work but I think that it pays off and in the end is the most successful method of getting people familiar with controls quickly. There are many different ways to approach controls training so I'll share my approach in the section below. If other people come up with other methods they would like to share I will include them as sections in this doc as well.
 
 #### Creating controller tutorials
 
+###### XBox One Controller
 
 
-#### Safety
+
+###### Oculus Touch Controller
 
 
+
+###### Vive Controller
+
+
+## Safety
+
+As with any installation, the safety of your visitors should be a top concern. If your experience is room scale and not seated I highly recommend marking out a boarder on the floor which mirrors the available roaming space for whoever is wearing the headset. This will help visitors who are observing keep clear of any sudden unpredictable movements made by the user. Taking advantage of the built in [Guardian System](https://support.oculus.com/help/oculus/1444824335542717) is a good idea. This system allows you to trace the 'safe' area for your user. With this enabled when the headset wearer gets close to the defined edge of 'play space' a visible wall will appear alerting the wearer of their proximity. Please note that if your sensor camera gets moved for any reason this can throw off the Guardian System's tracking and make the heads up boarder ineffective.
+
+**Important**<br>
+Some people can become disoriented when immersed in a VR experience. Because of this it is possible for someone to loose their balance and fall. For this reason I cannot recommend hosting an unattended standing experience.
+
+For more information please see the [Oculus Health and Safety Warnings documents](https://www.oculus.com/legal/health-and-safety-warnings/).
+
+**Hygiene**<br>
+When you've got something that's going to be touching the faces of hundreds or thousands of people its important to keep things sanitary. You can find various face protector solutions available online but at a minimum you should provide alcohol free sanitary wipes in an accessible area to allow visitors the opportunity to clean things off. Its also probably a good idea to keep a microfiber cloth handy to give the lenses a cleaning now and then as well. Be careful not to clean the lenses with anything abrasive otherwise you risk scratching and permanently damaging the headset. 
 
 ## Hardware Considerations
 
-
 #### Oculus
 
+The headset itself is lightweight and for the most part easy for people to adjust. That being said it is common for people to not notice the straps on the side of the headset that allow them to adjust the fit. If your installation will be left unattended I recommend putting a guide to adjusting the headset in print, upfront and next to the normal resting place of the headset and any controllers that you have.
+
+Remind your users that parts of the headset are delicate! In particular the earphones are vulnerable to being damaged or completely ripped off. If you're not careful the HDMI/USB tether cable for the oculus can degrade overtime and you may run into connectivity issues if the cable becomes pinched or excessively bent in any areas. I recommend looking into solutions for providing extra support or reinforcement for your cables. Otherwise you may want to invest in a few spares. Fortunately Oculus now offers replacement parts for these components which may be purchased from the Oculus [accessories page](https://www.oculus.com/accessories/)
 
 #### Vive
 
