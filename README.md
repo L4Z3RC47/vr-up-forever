@@ -102,15 +102,15 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 1. Create a .bat file to launch Oculus home, your app, and any other apps your installation is dependent on. Add the .bat script to your Startup folder.
 
 
-```dos
-@ECHO OFF
-TIMEOUT /T 10
-REM Total Delay = 10 seconds
-Start "" "C:\<PATH TO OCULUS HOME APP OR ALIAS>"
-TIMEOUT /T 30
-REM Total Delay = 30 seconds
-Start "" "C:\<PATH TO YOUR APP OR ALIAS>"
-```
+	```dos
+	@ECHO OFF
+	TIMEOUT /T 10
+	REM Total Delay = 10 seconds
+	Start "" "C:\<PATH TO OCULUS HOME APP OR ALIAS>"
+	TIMEOUT /T 30
+	REM Total Delay = 30 seconds
+	Start "" "C:\<PATH TO YOUR APP OR ALIAS>"
+	```
 
 1. Setup a power schedule if needed. To set a startup time you may need to return to your BIOS settings. To set a Shutdown time you can follow [these instructions](https://www.nextofwindows.com/how-to-schedule-windows-automatically-power-on-and-power-off) on how to setup a scheduled task in the control panel.
 
