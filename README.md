@@ -289,7 +289,7 @@ This option requires a bit more coding work but I think that it pays off and in 
 As with any installation, the safety of your visitors should be a top concern. If your experience is room scale and not seated I highly recommend marking out a boarder on the floor which mirrors the available roaming space for whoever is wearing the headset. This will help visitors who are observing keep clear of any sudden unpredictable movements made by the user. Taking advantage of the built in [Guardian System](https://support.oculus.com/help/oculus/1444824335542717) is a good idea. This system allows you to trace the 'safe' area for your user. With this enabled when the headset wearer gets close to the defined edge of 'play space' a visible wall will appear alerting the wearer of their proximity. Please note that if your sensor camera gets moved for any reason this can throw off the Guardian System's tracking and make the heads up boarder ineffective.
 
 **Important**<br>
-Some people can become disoriented when immersed in a VR experience. Because of this it is possible for someone to loose their balance and fall. For this reason I cannot recommend hosting an unattended standing experience.
+Some people can become disoriented when immersed in a VR experience. Because of this it is possible for someone to lose their balance and fall. For this reason I cannot recommend hosting an unattended standing experience.
 
 For more information please see the [Oculus Health and Safety Warnings documents](https://www.oculus.com/legal/health-and-safety-warnings/).
 
