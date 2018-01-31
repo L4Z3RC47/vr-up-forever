@@ -1,7 +1,7 @@
 # vr-up-forever
 This is an article with tips about how to keep a VR installation up forever
 
-This doc is a work in progress and I'll continue to add new things as they come up. If you have questions feel free to tweet me [@WJRRo](https://twitter.com/wjrro)
+This doc is a work in progress and I'll continue to add new things as they come up. If you have questions feel free to tweet me [@WJRRo](https://twitter.com/L4Z3RC47)
 
 Inspired by Installation_Up_4evr by [laserpilot](https://github.com/laserpilot)
 
