@@ -106,7 +106,7 @@ HTC also posts their current minimum specs and links to some hardware [here](htt
 	@ECHO OFF
 	TIMEOUT /T 10
 	REM Total Delay = 10 seconds
-	Start "" "C:\<PATH TO OCULUS HOME APP OR ALIAS>"
+	Start "" "C:\<PATH TO "OculusClient.exe" OR ALIAS>"
 	TIMEOUT /T 30
 	REM Total Delay = 30 seconds
 	Start "" "C:\<PATH TO YOUR APP OR ALIAS>"
